@@ -1,0 +1,33 @@
+name: sievescript_dart
+description: A Dart implementation of JMAP Sieve script management
+version: 1.0.0
+homepage: https://github.com/viethoang99/sievescript_dart
+repository: https://github.com/viethoang99/sievescript_dart.git
+
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.2  # Add this line
+  json_annotation: ^4.8.1
+  meta: ^1.9.1
+  async: ^2.11.0
+  collection: ^1.17.2
+
+dev_dependencies:
+  lints: ^2.1.0
+  test: ^1.24.0
+  build_runner: ^2.4.6
+  json_serializable: ^6.7.1
+  mockito: ^5.4.2
+
+# Add custom configuration
+publish_to: 'none'  # Changed from 'enable' to 'none' to prevent publishing
+
+# Configure builders for JSON serialization
+builders:
+  json_serializable:
+    options:
+      explicit_to_json: true
+      include_if_null: false
